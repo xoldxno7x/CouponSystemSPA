@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Coupon Project - The WebApp</title>
+<link rel="stylesheet" href="CouponStyle.css">
+<link rel="stylesheet" href="bootstrap.min.css">
+
+</head>
+
+<body>
+<div id="holder">
+    <div id="header">
+    <h1 id="headText">The Coupon WebApp</h1>
+	<hr>
+	</div>
+	
+	<div id="body">
+	
+	<div id="logSelect">
+
+
+
+		<h2>login in as...</h2>
+
+		<div id="adminlog">
+			<p class="pi">Admin</p>
+		</div>
+		<div id="companylog">
+			<p class="pi">Company</p>
+		</div>
+		<div id="customerlog">
+			<p class="pi">Customer</p>
+		</div>
+
+	</div>
+
+	<div id="login">
+
+		<label for="username">Username</label> <input type="text"
+			name="username" id="username" placeholder="type username here...">
+		<br> <label for="password">Password</label> <input
+			type="password" name="password" id="password"> <br> <input
+			type="submit" id="submit1" class="subBut" value="Login"> <br>
+		<div id="home">
+		<h3>Back to main page</h3>
+		</div>
+		
+		<div class="error">
+			<h3 id="loginError">Wrong login details, please try again.</h3>
+		</div>
+
+
+
+
+	</div>
+
+	<div id="adminContent">
+
+		<div id="adminMenu">
+			<h4 class="header">Company</h4>
+
+			<h5 id="genComp">Create company</h5>
+			<h5 id="updComp">Update company</h5>
+			<h5 id="delComp">Delete company</h5>
+			<h5 id="viewComp">View company</h5>
+			<h5 id="viewAllComp">View all companies</h5>
+
+			<h4 class="header">Customer</h4>
+
+			<h5 id="genCus">Create customer</h5>
+			<h5 id="updCus">Update customer</h5>
+			<h5 id="delCus">Delete customer</h5>
+			<h5 id="viewCus">View customer</h5>
+			<h5 id="viewAllCust">View all customers</h5>
+
+			<h5 id="adminLogout">Logout</h5>
+		</div>
+
+		<div id="displayRs"></div>
+
+
+	</div>
+
+	<div id="allCompaniesTable"></div>
+
+	<div id="displaySingleComp">
+		<h2>Find company by ID</h2>
+		<label for="compId">Company ID</label> <input type="text"
+			name="compId" id="compId" placeholder="enter company ID here...">
+		<br> <input type="submit" id="submit2" class="subBut"
+			value="Find Company"> <br>
+		<div class="error">
+			<h3 id="viewCompError">No such company, please try again.</h3>
+		</div>
+
+	</div>
+
+
+	<div id="createComp">
+
+		<h2>Create Company</h2>
+
+
+		<label for="compName">Company name</label> <input type="text"
+			name="compName" id="compNameGen"
+			placeholder="enter company Name here..."> <br> <label
+			for="compPass">Password</label> <input type="text" name="compPass"
+			id="compPassGen" placeholder="create company password"> <br>
+		<label for="compEm">Company Email</label> <input type="text"
+			name="compEm" id="compEmGen"
+			placeholder="enter company Email here..."> <br> <input
+			type="submit" id="submit3" class="subBut" value="Create Company">
+
+
+
+
+
+
+	</div>
+
+	<div id="deleteComp">
+
+		<h2>Delete Company</h2>
+
+		<label for="compId">Company ID</label> <input type="text"
+			name="compId" id="compIdDel" placeholder="enter company ID here...">
+		<br> <input type="submit" id="submit4" class="subBut"
+			value="Delete Company">
+	</div>
+
+	<div id="updateComp">
+
+		<h2>Update Company</h2>
+		<h3>Name of the company you wish to update</h3>
+
+		<label for="compName">Company name</label> <input type="text"
+			name="compName" id="compNameUpd"
+			placeholder="enter company name here...">
+		<hr>
+		<h3>Company parameters you wish to update</h3>
+
+		<label for="compId">Company ID</label> <input type="text"
+			name="compId" id="compIdUpd" placeholder="enter company ID here...">
+		<br> <label for="compPass">Password</label> <input type="text"
+			name="compPass" id="compPassUpd"
+			placeholder="create company password"> <br> <label
+			for="compEm">Company Email</label> <input type="text" name="compEm"
+			id="compEmUpd" placeholder="enter company Email here..."> <br>
+
+		<input type="submit" id="submit5" class="subBut"
+			value="Update Company">
+
+	</div>
+
+	<div id="createCus">
+
+		<h2>Create Customer</h2>
+
+
+		<label for="custName">Customer name</label> <input type="text"
+			name="custName" id="custNameGen"
+			placeholder="enter customer Name here..."> <br> <label
+			for="custPass">Password</label> <input type="text" name="compPass"
+			id="custPassGen" placeholder="create customer password"> <br>
+
+		<input type="submit" id="submit6" class="subBut"
+			value="Create Customer">
+	</div>
+
+	<div id="updateCust">
+		<h2>Update Customer</h2>
+		<h3>Name of the customer you wish to update</h3>
+
+		<label for="custName">Customer name</label> <input type="text"
+			name="custName" id="custNameUpd"
+			placeholder="enter customer name here...">
+		<hr>
+		<h3>Customer parameters you wish to update</h3>
+
+		<label for="custId">Customer ID</label> <input type="text"
+			name="custId" id="custIdUpd" placeholder="enter customer ID here...">
+		<br> <label for="compPass">Password</label> <input type="text"
+			name="compPass" id="custPassUpd"
+			placeholder="create customer password"> <br> <input
+			type="submit" id="submit7" class="subBut" value="Update Customer">
+
+	</div>
+
+	<div id="deleteCust">
+
+		<h2>Delete Customer</h2>
+
+		<label for="custId">Customer ID</label> <input type="text"
+			name="custId" id="custIdDel" placeholder="enter cusotmer ID here...">
+		<br> <input type="submit" id="submit8" class="subBut"
+			value="Delete Customer">
+	</div>
+
+	<div id="displaySingleCust">
+		<h2>Find customer by ID</h2>
+		<label for="custId">Customer ID</label> <input type="text"
+			name="custId" id="getCustId" placeholder="enter company ID here...">
+		<br> <input type="submit" id="submit9" class="subBut"
+			value="Find Customer"> <br>
+		<div class="error">
+			<h3 id="viewCustError">No such customer, please try again.</h3>
+		</div>
+
+	</div>
+
+	<div id="admLogout">
+		<h2>Logout</h2>
+
+		<p>Are you sure you want to logout?</p>
+		<input type="submit" id="submit10" class="subBut" value="Let me out!">
+	</div>
+
+
+
+	<div id="customerContent">
+
+		<div id="customerMenu">
+
+			<h4 class="header">
+				Customer <br> Menu
+			</h4>
+
+			<h5 id="viewAllCoupons">View all Coupons</h5>
+			<h5 id="purchaseCoup">Purchase Coupon</h5>
+			<h5 id="viewPurchCoupons">View Purchased Coupons</h5>
+			<h5 id="viewCoupByType">
+				View Purchased Coupons <br> by Type
+			</h5>
+			<h5 id="viewCoupByPrice">
+				View Purchased Coupons <br> by Price
+			</h5>
+
+			<h5 id="custLogout">Logout</h5>
+		</div>
+
+		<div id="customerDisplay"></div>
+
+		<div id="pourCoup">
+			<h2>Purchase Coupon</h2>
+			<label for="coupPourId">Coupon ID</label> <input type="text"
+				name="coupPourId" id="coupPourId"
+				placeholder="enter coupon ID here..."> <br> <input
+				type="submit" id="submit11" class="subBut" value="Purchase Coupon">
+
+		</div>
+
+		<div id="CoupByType">
+			<h2>Purchased coupons by type</h2>
+			<form>
+				<input type="radio" name="type" value="RESTURANTS" checked>
+				Restaurants<br> <input type="radio" name="type"
+					value="ELECTRICITY"> Electricity<br> <input
+					type="radio" name="type" value="FOOD"> Food<br> <input
+					type="radio" name="type" value="HEALTH"> Health<br> <input
+					type="radio" name="type" value="SPORTS"> Sports<br> <input
+					type="radio" name="type" value="CAMPING"> Camping<br>
+				<input type="radio" name="type" value="TRAVELLING">
+				Traveling<br>
+			</form>
+			<br> <input type="submit" id="submit12" class="subBut"
+				value="Find Coupons">
+
+			<div class="error">
+				<h3 id="viewTypeError">No coupons of such type</h3>
+			</div>
+
+		</div>
+
+		<div id="CoupByPrice">
+			<h2>Find coupon by price</h2>
+			<label for="coupPrice">Coupon price</label> <input type="text"
+				name="coupPrice" id="coupPrice"
+				placeholder="enter coupon price here..."> <br> <input
+				type="submit" id="submit13" class="subBut" value="Find Coupon">
+
+			<div class="error">
+				<h3 id="viewPriceError">No coupons for selected price</h3>
+			</div>
+
+
+
+
+
+		</div>
+		<div id="customerLogout">
+			<h2>Logout</h2>
+
+			<p>Are you sure you want to logout?</p>
+			<input type="submit" id="submit14" class="subBut" value="Let me out!">
+		</div>
+
+	</div>
+
+	<div id="companyContent">
+
+		<div id="companyMenu">
+
+			<h4 class="header">
+				Company <br> Menu
+			</h4>
+
+			<h5 id="createCoupon">Create coupon</h5>
+			<h5 id="deleteCoupon">Delete coupon</h5>
+			<h5 id="updateCoupon">Update coupon</h5>
+			<h5 id="getCoupon">Find coupon</h5>
+			<h5 id="getAllCompCoup">View all coupons</h5>
+			<h5 id="viewAllCompCoupsType">
+				View coupons <br>by type
+			</h5>
+
+			<h5 id="compLogout">Logout</h5>
+		</div>
+
+		<div id="createCoup">
+
+			<h2>Create coupon</h2>
+			<label for="title">Coupon title</label> <input type="text"
+				name="title" id="titleGen" placeholder="enter coupon title here...">
+			<br>
+			<label for="title">Start-Date</label>
+			<input type="date" name="startDate" id="startDate">
+			<br>
+			<label for="title">End-Date</label> 
+			<input type="date" name="endDate" id="endDate" >
+			<br>
+			<label for="title">Amount</label> <input type="text"
+				name="amount" id="amountGen" placeholder="enter the amount of coupons">
+			<br>
+			<form>
+			<h2>Type</h2>
+				<input type="radio" name="type2" value="RESTURANTS" checked>
+				Restaurants <input type="radio" name="type2"
+					value="ELECTRICITY"> Electricity <input
+					type="radio" name="type2" value="FOOD"> Food <input
+					type="radio" name="type2" value="HEALTH"> Health <input
+					type="radio" name="type2" value="SPORTS"> Sports <input
+					type="radio" name="type2" value="CAMPING"> Camping
+				<input type="radio" name="type2" value="TRAVELLING">
+				Traveling
+			</form>
+			<br>
+			<label for="title">Message</label> <input type="text"
+				name="message" id="messageGen" placeholder="enter message">
+			<br>
+			<label for="title">Price</label> <input type="text"
+				name="price" id="priceGen" placeholder="enter price">
+			<br>
+			<label for="title">Image</label> <input type="text"
+				name="image" id="imageGen" placeholder="enter image url">
+			<br>
+			
+			
+			 <input type="submit" id="submit15" class="subBut"
+				value="Create coupon"> <br>
+		</div>
+		
+		<div id="deleteCoup">
+		 	<h2>Delete coupon</h2>
+			<label for="coupDel">Coupon ID</label> <input type="text"
+				name="coupDel" id="coupDel" placeholder="enter coupon ID..">
+			<br>
+			<input type="submit" id="submit16" class="subBut"
+				value="Delete coupon">
+		
+		 
+		</div>
+		
+		<div id="updateCoup">
+		<h2>Update Coupon</h2>
+		<h3>Enter ID of coupon to update</h3>
+			<label for="coupIdUpd">Coupon ID</label> <input type="text"
+				name="coupIdUpd" id="coupIdUpd" placeholder="enter coupon ID here..">
+			<br>
+			<hr>
+		<h3>Enter parameters to update</h3>
+			
+			<label for="title">End-Date</label> 
+			<input type="date" name="endDate" id="endDateUpd" >
+			<br>
+			<label for="priceUpd">Price</label> <input type="text"
+				name="priceUpd" id="priceUpd" placeholder="enter price">
+			
+			<br>
+			<input type="submit" id="submit17" class="subBut"
+				value="Update coupon">
+		
+		</div>
+
+<div id="getCoup">
+		<h2>Find company coupon by ID</h2>
+		<label for="getCompCoupId">Coupon ID</label> <input type="text"
+			name="getCompCoupId" id="getCompCoupId" placeholder="enter coupon ID here...">
+		<br> <input type="submit" id="submit18" class="subBut"
+			value="Find Coupon">
+
+	</div>
+	
+	<div id="compDisplay"></div>
+	
+	<div id="compCoupsByType">
+	
+			<h2>View coupons by type</h2>
+			<form>
+				<input type="radio" name="type3" value="RESTURANTS" checked>
+				Restaurants<br> <input type="radio" name="type3"
+					value="ELECTRICITY"> Electricity<br> <input
+					type="radio" name="type3" value="FOOD"> Food<br> <input
+					type="radio" name="type3" value="HEALTH"> Health<br> <input
+					type="radio" name="type3" value="SPORTS"> Sports<br> <input
+					type="radio" name="type3" value="CAMPING"> Camping<br>
+				<input type="radio" name="type3" value="TRAVELLING">
+				Traveling<br>
+			</form>
+			<br> <input type="submit" id="submit19" class="subBut"
+				value="Find Coupons">
+
+			<div class="error">
+				<h3 id="viewCoupTypeError">No coupons of such type</h3>
+			</div>
+	
+	
+	</div>
+	
+	
+	<div id="companyLogout">
+	<h2>Logout</h2>
+
+			<p>Are you sure you want to logout?</p>
+			<input type="submit" id="submit20" class="subBut" value="Let me out!">
+	
+	
+	</div>
+
+
+	</div>
+	
+	</div>
+	
+	<div id=footer>
+	<h1 id="footText">Coupon web app by Egor Katz</h1>
+	<p id="footTxt">Single page application, using RESTful api and HTML,CSS,JS for client side. 
+	  </p> 
+	</div>
+	
+</div>
+
+	<script type="text/javascript" src="couponScript.js"></script>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+
+</html>

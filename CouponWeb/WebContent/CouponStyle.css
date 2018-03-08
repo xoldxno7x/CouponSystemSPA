@@ -1,0 +1,343 @@
+html,body{
+    height: 100%
+}
+
+#holder{
+    min-height: 100%;
+    position:relative;
+}
+
+#body{
+    padding-top:30px;
+    padding-bottom: 1000px;    /* height of footer */
+}
+
+
+#header{
+	background-color: black;
+	height:200px;
+	padding:50px;
+	
+}
+
+#headText{
+	color:white;
+	 font-family: "Times New Roman", Times, serif;
+	 font-weight: bold;
+}
+
+#footer{
+	background-color: black;
+position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#footText{
+	color:white;
+	 font-family: "Times New Roman", Times, serif;
+	 font-weight: bold;
+}
+#footTxt{
+	color:white;
+	 font-family: "Times New Roman", Times, serif;
+}
+
+
+#logSelect {
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+
+}
+
+
+#adminlog, #companylog, #customerlog {
+	position: relative;
+	float: left;
+	margin: 50px;
+	font-size: 200%;
+	border-radius: 50%;
+	background-color: #e0e2e1;
+	width: 140px;
+	height: 140px;
+	
+}
+
+#adminlog:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+
+#companylog:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+
+#customerlog:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+
+.pi {
+	text-align: center;
+	line-height: 120px;
+}
+
+#login, #displaySingleComp, #createComp, #deleteComp,#updateComp
+,#createCus,#updateCust,#deleteCust,#displaySingleCust,#admLogout
+,#pourCoup,#CoupByType,#CoupByPrice,#customerLogout,#createCoup,
+#deleteCoup, #updateCoup,#getCoup,#compCoupsByType,#companyLogout{
+	font-size: 25px;
+	display: none;
+	margin: 0 auto;
+	position: relative;
+	float: left;
+}
+
+#username {
+	padding: 5px 5px 12px 5px;
+	font-size: 25px;
+	border-radius: 10px;
+	border: 1px solid gray;
+	width: 320px;
+	margin: 15px;
+}
+
+#password, #submit1, #compId, #submit2, #submit3, #compIdGen,
+	#compNameGen, #compPassGen, #compEmGen, #compIdDel, #submit4
+	,#compNameUpd,#submit5,#compPassUpd,#compEmUpd,#compIdUpd,
+	 #custNameGen,#custPassGen,#submit6,#submit7,#custIdUpd
+	 ,#custPassUpd,#custNameUpd,#custIdDel,#submit8,#submit9
+	 ,#getCustId,#submit10,#coupPourId,#submit11,#submit12
+	 ,#coupType,#submit13,#coupPrice,#submit14,#submit15
+	 ,#titleGen,#startDate,#endDate,#amountGen,
+	 #typeGen,#messageGen,#priceGen,#imageGen,#coupDel,#submit16
+	 ,#submit17,#priceUpd,#endDateUpd,#coupIdUpd,#submit18,#getCompCoupId,#submit19
+	 ,#submit20{
+	padding: 5px 5px 12px 5px;
+	font-size: 25px;
+	border-radius: 10px;
+	border: 1px solid gray;
+	width: 320px;
+	margin: 15px;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	background-color: white;
+	display: inline;
+}
+
+
+#adminContent,#customerMenu,#companyContent {
+	display: none;
+}
+
+.error{
+	margin:30px;
+}
+
+#loginError,#viewCompError,#viewCustError,#viewTypeError,#viewPriceError,
+#viewCoupTypeError {
+	display: none;
+	margin: 10px 0px;
+	padding: 12px;
+	color: #D8000C;
+	background-color: #FFD2D2;
+	border-radius: .5em;
+	box-shadow: 1px 1px 3px #888;
+	
+}
+
+#adminMenu, #customerMenu, #companyMenu {
+	margin: 30px;
+	width: 250px;
+	border-style: solid;
+	border-width: 2px;
+	list-style-type: none;
+	padding-left: 0pt;
+	font-size: 150%;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	float: left;
+}
+
+#displayRs {
+	position: relative;
+	float: left;
+	margin: 100px;
+}
+
+#allCompaniesTable {
+	display: none;
+}
+
+h5:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+
+.header {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+th, td {
+	padding: 15px;
+	text-align: left;
+}
+
+tr:hover {
+	background-color: #f5f5f5;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+
+#submit1:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit2:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit3:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit4:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit5:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+
+#submit6:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+
+
+#submit7:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+
+#submit8:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit9:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit10:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit11:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit12:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit13:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit14:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit15:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit16:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit17:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit18:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit19:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+#submit20:hover {
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+
+#home{
+	text-decoration: underline;
+	margin:50px;
+}
+
+#home:hover{
+text-shadow: 2px 2px 5px #4CAF50;
+}
